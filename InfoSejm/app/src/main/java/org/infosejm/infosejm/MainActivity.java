@@ -43,10 +43,16 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void json(View view) {
-        String imiee = imie.getText().toString().toLowerCase();
-        String nazwiskoo = nazwisko.getText().toString().toLowerCase();
+        String imieInput = imie.getText().toString().toLowerCase();
+        String imieOutput = imieInput.replace("ł", "l").replace("ą", "a").replace("ś", "s")
+                .replace("ż", "z").replace("ć", "c").replace("ę", "e")
+                .replace("ó", "o").replace("ź", "z").replace("ń", "n");
+        String nazwiskoInput = nazwisko.getText().toString().toLowerCase();
+        String nazwiskoOutput = nazwiskoInput.replace("ł", "l").replace("ą", "a").replace("ś", "s")
+                .replace("ż", "z").replace("ć", "c").replace("ę", "e")
+                .replace("ó", "o").replace("ź", "z").replace("ń", "n");
         String id = "";
-        String posel = (nazwiskoo + "-" + imiee);
+        String posel = (nazwiskoOutput + "-" + imieOutput);
 
         for(int i = 0; i<members.length; i++){
             if(posel.equals(members[i][1])){
@@ -113,12 +119,7 @@ public class MainActivity extends AppCompatActivity {
                         Double.parseDouble(biuroUposazenia) + Double.parseDouble(biuroSpotkania) + Double.parseDouble(biuroWyjazdy) +
                         Double.parseDouble(biuroPrzejazdy) +  Double.parseDouble(biuroRefundacja) +  Double.parseDouble(biuroTelekomunikacja ) +
                         + Double.parseDouble(biuroBiuro) + Double.parseDouble(biuroPodrozePracownikow ) + Double.parseDouble(biuroSrodkiTrwale);
-
-
-
-
-
-
+                double zaokragloneWydatki = Math.round(sumaWydatkow * 100.0) / 100.0;
                 return "Dane personalne" + "\n\nImię i nazwisko: " + nazwa + "\nData urodzenia: " + dataUrodzenia +
                         "\nMiejsce zamieszkania: " + zamieszkanie + "\nZawód: " + zawod +
                         "\nPartia: " + klub + "\n\nDziałania w Sejmie RP" +
@@ -132,7 +133,7 @@ public class MainActivity extends AppCompatActivity {
                         "\nWydatki na przejazdy: " + biuroPrzejazdy + "\nWydatki na refudacja: " + biuroRefundacja +
                         "\nWydatki na telekomunikacje: " + biuroTelekomunikacja + "\nWydatki na biuro: " + biuroBiuro +
                         "\nWydatki na podróże pracowników: " + biuroPodrozePracownikow + "\nWydatki na środki trwałe: " + biuroSrodkiTrwale +
-                        "\nWydatki na biuro(inne): " + biuroInne + "\n\nSuma wydatków: " + sumaWydatkow;
+                        "\nWydatki na biuro(inne): " + biuroInne + "\n\nSuma wydatków: " + zaokragloneWydatki;
             } catch (IOException e) {
                 e.printStackTrace();
             } catch (JSONException e) {
