@@ -20,11 +20,18 @@
         android:text="Tomczykiewicz" />
 
     <Button
-        android:id="@+id/button4"
-        android:layout_width="match_parent"
+        android:id="@+id/button"
+        android:layout_width="192dp"
+        android:layout_height="wrap_content"
+        android:onClick="ranking"
+        android:text="Ranking" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="189dp"
         android:layout_height="wrap_content"
         android:onClick="json"
-        android:text="Button" />
+        android:text="Sprawdz" />
 
     <ScrollView
         android:layout_width="match_parent"
