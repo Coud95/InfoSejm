@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageButton
+        android:id="@+id/about"
+        android:onClick="about"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="78dp"
+        android:layout_marginEnd="43dp"
+        android:layout_marginRight="43dp"
+        android:background="@null"
+        app:srcCompat="@drawable/about" />
+
+    <ImageButton
+        android:id="@+id/ranking"
+        android:onClick="ranking"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/main"
+        android:layout_alignStart="@+id/main"
+        android:layout_alignTop="@+id/about"
+        android:background="@null"
+        app:srcCompat="@drawable/ranking" />
+
+    <ImageButton
+        android:id="@+id/compare"
+        android:onClick="compare"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/about"
+        android:layout_alignStart="@+id/about"
+        android:layout_alignTop="@+id/main"
+        android:background="@null"
+        app:srcCompat="@drawable/compare" />
+
+    <ImageButton
+        android:id="@+id/main"
+        android:onClick="main"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/ranking"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="112dp"
+        android:layout_marginLeft="33dp"
+        android:layout_marginStart="33dp"
+        android:background="@null"
+        app:srcCompat="@drawable/main" />
+
+</RelativeLayout>
