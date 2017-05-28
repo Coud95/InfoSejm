@@ -32,7 +32,7 @@ public class Menu extends AppCompatActivity {
     public void about(View view) {
         AlertDialog alertDialog = new AlertDialog.Builder(Menu.this).create();
         alertDialog.setTitle("O aplikacji");
-        alertDialog.setMessage("Lorem ipsum dolor sit amet enim. Etiam ullamcorper. Suspendisse a pellentesque dui, non felis. Maecenas malesuada elit lectus felis, malesuada ultricies. Curabitur et ligula. Ut molestie a, ultricies porta urna. Vestibulum commodo volutpat a, convallis ac, laoreet enim. Phasellus fermentum in, dolor.");
+        alertDialog.setMessage("Aplikacja InfoSejm umożliwia użytkownikowi dowiedzieć się więcej na temat posłów Sejmu RP. Funkcjonalności to wyświetlenie szczegółowych informacji o danym pośle, porównanie dwóch posłów, a także ranking wydatków partii oraz posłów. Aplikacja korzysta z API Sejmometr.");
         alertDialog.show();
     }
 }

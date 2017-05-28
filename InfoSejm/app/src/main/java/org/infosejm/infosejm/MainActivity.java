@@ -46,19 +46,10 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
-
-
-        Log.i("MEMBERS MOTHER FUKER", members[459][0]);
-
-
         textView = (TextView) findViewById(R.id.textView);
         imie = (EditText) findViewById(R.id.editText);
         nazwisko = (EditText) findViewById(R.id.editText2);
         textView = (TextView)findViewById(R.id.textView);
-    }
-    public void ranking(View view){
-        Intent intent = new Intent(this, Ranking.class);
-        startActivity(intent);
     }
     public void json(View view) {
         String imieInput = imie.getText().toString().toLowerCase();
@@ -138,8 +129,9 @@ public class MainActivity extends AppCompatActivity {
                         Double.parseDouble(biuroPrzejazdy) +  Double.parseDouble(biuroRefundacja) +  Double.parseDouble(biuroTelekomunikacja ) +
                         + Double.parseDouble(biuroBiuro) + Double.parseDouble(biuroPodrozePracownikow ) + Double.parseDouble(biuroSrodkiTrwale);
                 double zaokragloneWydatki = Math.round(sumaWydatkow * 100.0) / 100.0;
+                long l = (long)zaokragloneWydatki;
+                String zaokragloneWydatkiFormat = String.format("%,8d", l);
 
-                //members[id][3] = sumaWydatkow;
 
                 return "Dane personalne" + "\n\nImię i nazwisko: " + nazwa + "\nData urodzenia: " + dataUrodzenia +
                         "\nMiejsce zamieszkania: " + zamieszkanie + "\nZawód: " + zawod +
@@ -147,14 +139,14 @@ public class MainActivity extends AppCompatActivity {
                         "\n\nLiczba projektów uchwał: " + liczbaProjektowUchwal + "\nLiczba wypowiedzi: " + liczbaWypowiedzi+
                         "\nLiczba projektów ustaw: " + liczbaProjektowUstaw + "\nLiczba głosowań: " + liczbaGlosowan +
                         "\nLiczba głosowań opuszczonych: " + liczbaGlosowowanOpuszczonych + "\n\nWydatki" +
-                        "\n\nWydatki na ekspertyzy: " + biuroEkspertyzy + "\nWydatki na materiały: " + biuroMaterialy +
-                        "\nWydatki na taksówki: " + biuroTaksowki + "\nWydatki na zlecenia: " + biuroZlecenia +
-                        "\nWydatki na wynagrodzenia: " + biuroWynagrodzenia + "\nWydatki na uposażenia: " + biuroUposazenia +
-                        "\nWydatki na spotkania: " + biuroSpotkania + "\nWydatki na wyjazdy: " + biuroWyjazdy +
-                        "\nWydatki na przejazdy: " + biuroPrzejazdy + "\nWydatki na refudacja: " + biuroRefundacja +
-                        "\nWydatki na telekomunikacje: " + biuroTelekomunikacja + "\nWydatki na biuro: " + biuroBiuro +
-                        "\nWydatki na podróże pracowników: " + biuroPodrozePracownikow + "\nWydatki na środki trwałe: " + biuroSrodkiTrwale +
-                        "\nWydatki na biuro(inne): " + biuroInne + "\n\nSuma wydatków: " + zaokragloneWydatki;
+                        "\n\nWydatki na ekspertyzy: " + biuroEkspertyzy + " zł" + "\nWydatki na materiały: " + biuroMaterialy + " zł" +
+                        "\nWydatki na taksówki: " + biuroTaksowki + " zł" + "\nWydatki na zlecenia: " + biuroZlecenia + " zł" +
+                        "\nWydatki na wynagrodzenia: " + biuroWynagrodzenia + " zł" + "\nWydatki na uposażenia: " + biuroUposazenia + " zł" +
+                        "\nWydatki na spotkania: " + biuroSpotkania + " zł" + "\nWydatki na wyjazdy: " + biuroWyjazdy +
+                        "\nWydatki na przejazdy: " + biuroPrzejazdy + " zł" + "\nWydatki na refudacja: " + biuroRefundacja + " zł" +
+                        "\nWydatki na telekomunikacje: " + biuroTelekomunikacja + " zł" + "\nWydatki na biuro: " + biuroBiuro + " zł" +
+                        "\nWydatki na podróże pracowników: " + biuroPodrozePracownikow + " zł" + "\nWydatki na środki trwałe: " + biuroSrodkiTrwale + " zł" +
+                        "\nWydatki na biuro(inne): " + biuroInne + " zł" + "\n\nSuma wydatków: " + zaokragloneWydatkiFormat + " zł";
             } catch (IOException | JSONException e) {
                 e.printStackTrace();
             } finally {

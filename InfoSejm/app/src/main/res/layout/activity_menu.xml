@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#E3F2FD"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <ImageButton
         android:id="@+id/about"
-        android:onClick="about"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
@@ -16,33 +16,33 @@
         android:layout_marginEnd="43dp"
         android:layout_marginRight="43dp"
         android:background="@null"
+        android:onClick="about"
         app:srcCompat="@drawable/about" />
 
     <ImageButton
         android:id="@+id/ranking"
-        android:onClick="ranking"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/main"
         android:layout_alignStart="@+id/main"
         android:layout_alignTop="@+id/about"
         android:background="@null"
+        android:onClick="ranking"
         app:srcCompat="@drawable/ranking" />
 
     <ImageButton
         android:id="@+id/compare"
-        android:onClick="compare"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/about"
         android:layout_alignStart="@+id/about"
         android:layout_alignTop="@+id/main"
         android:background="@null"
+        android:onClick="compare"
         app:srcCompat="@drawable/compare" />
 
     <ImageButton
         android:id="@+id/main"
-        android:onClick="main"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_above="@+id/ranking"
@@ -52,6 +52,63 @@
         android:layout_marginLeft="33dp"
         android:layout_marginStart="33dp"
         android:background="@null"
+        android:onClick="main"
         app:srcCompat="@drawable/main" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/main"
+        android:layout_alignLeft="@+id/main"
+        android:layout_alignRight="@+id/main"
+        android:layout_alignStart="@+id/main"
+        android:layout_below="@+id/compare"
+        android:gravity="center_horizontal|center"
+        android:text="Sprawdź posła"
+        android:textSize="12sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/compare"
+        android:layout_alignLeft="@+id/compare"
+        android:layout_alignRight="@+id/compare"
+        android:layout_alignStart="@+id/compare"
+        android:layout_below="@+id/compare"
+        android:gravity="center_horizontal|center"
+        android:text="Porównaj posłów"
+        android:textSize="12sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/ranking"
+        android:layout_alignLeft="@+id/ranking"
+        android:layout_alignRight="@+id/ranking"
+        android:layout_alignStart="@+id/ranking"
+        android:layout_below="@+id/ranking"
+        android:gravity="center_horizontal|center"
+        android:text="Ranking"
+        android:textSize="12sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/about"
+        android:layout_alignLeft="@+id/about"
+        android:layout_alignRight="@+id/about"
+        android:layout_alignStart="@+id/about"
+        android:layout_below="@+id/ranking"
+        android:gravity="center_horizontal|center"
+        android:text="O aplikacji"
+        android:textSize="12sp"
+        android:textStyle="bold" />
 
 </RelativeLayout>

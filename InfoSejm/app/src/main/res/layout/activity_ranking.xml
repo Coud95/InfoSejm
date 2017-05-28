@@ -2,18 +2,112 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#E3F2FD"
     android:orientation="vertical">
 
+    <TextView
+        android:id="@+id/poslowe"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/pos_owie_z_najwi_kszymi_wydatkami"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/rankPos1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="2sp"
+        android:text=""
+        android:onClick="sprawdz1"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/rankPos2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="2sp"
+        android:text=""
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/rankPos3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="2sp"
+        android:text=""
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/rankPos4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="2sp"
+        android:text=""
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/rankPos5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="2sp"
+        android:text=""
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/rankPos6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="2sp"
+        android:text=""
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/rankPos7"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="2sp"
+        android:text=""
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/rankPos8"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="2sp"
+        android:text=""
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/rankPos9"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="2sp"
+        android:text=""
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/rankPos10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="2sp"
+        android:text=""
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/partie"
+        android:textSize="18sp" />
+
     <ScrollView
-        android:id="@+id/lista"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
         <TextView
-            android:id="@+id/ranking"
+            android:id="@+id/rankPartii"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text=""
-            android:textSize="20sp" />
+            android:text="" />
     </ScrollView>
 </LinearLayout>

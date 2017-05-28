@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">InfoSejm</string>
+    <string name="name">imię</string>
+    <string name="surname">nazwisko</string>
+    <string name="search">sprawdź</string>
+    <string name="compare">porównaj</string>
+    <string name="pos_owie_z_najwi_kszymi_wydatkami">Posłowie z największymi wydatkami:</string>
+    <string name="partie">Partie:</string>
 </resources>
