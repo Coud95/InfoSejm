@@ -6,4 +6,6 @@
     <string name="compare">porównaj</string>
     <string name="pos_owie_z_najwi_kszymi_wydatkami">Posłowie z największymi wydatkami:</string>
     <string name="partie">Partie:</string>
+    <string name="pierwszy_pose"><u>Pierwszy poseł:</u></string>
+    <string name="drugi_posel"><u>Drugi poseł:</u></string>
 </resources>

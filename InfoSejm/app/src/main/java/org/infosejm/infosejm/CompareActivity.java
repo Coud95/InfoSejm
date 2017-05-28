@@ -9,7 +9,7 @@ import android.widget.TextView;
 
 import org.json.JSONException;
 import org.json.JSONObject;
-
+import static org.infosejm.infosejm.Tablica.members;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
@@ -21,6 +21,7 @@ import javax.net.ssl.HttpsURLConnection;
 public class CompareActivity extends AppCompatActivity {
     EditText imie1, nazwisko1, imie2, nazwisko2;
     TextView person1, person2;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,12 +58,12 @@ public class CompareActivity extends AppCompatActivity {
         String posel = (nazwiskoOutput + "-" + imieOutput);
         String posel2 = (nazwiskoOutput2 + "-" + imieOutput2);
 
-        for (int i = 0; i < MainActivity.members.length; i++) {
-            if (posel.equals(MainActivity.members[i][1])) {
-                id = MainActivity.members[i][0];
+        for (int i = 0; i < members.length; i++) {
+            if (posel.equals(members[i][1])) {
+                id = members[i][0];
             }
-            if (posel2.equals(MainActivity.members[i][1])) {
-                id2 = MainActivity.members[i][0];
+            if (posel2.equals(members[i][1])) {
+                id2 = members[i][0];
             }
         }
         new JSONTask().execute("https://api-v3.mojepanstwo.pl/dane/poslowie/" + id + ".json");
@@ -199,7 +200,7 @@ public class CompareActivity extends AppCompatActivity {
                 String zaokragloneWydatkiFormat = String.format("%,8d", l);
 
                 return nazwa + "\nPartia: " + klub + "\n\nSuma wydatków: " + zaokragloneWydatkiFormat + " zł";
-                
+
             } catch (IOException | JSONException e) {
                 e.printStackTrace();
             } finally {
